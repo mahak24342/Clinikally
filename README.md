@@ -28,19 +28,33 @@ Build an AutoComplete search field that:
 ---
 
 
-##Thought Processs
+###Thought Processs
 
-i have used fetch to get the data from the given api and have used react hooks such as useState ,useEffect
-i have also implemented debouncing using setTimeout.also used try and catch to catch the error if any.
+Here’s a polished and professional version of your paragraph that you can include in your `README.md` under the **Thought Process** section or use anywhere else:
 
-Used React hooks:
+---
+
+### 🧠 Thought Process
+
+To implement the AutoComplete functionality:
+
+* I used the Fetch API to retrieve data from the provided endpoint (`https://dummyjson.com/products/search?q=`).
+* Utilized React hooks such as `useState` for managing input and results, and `useEffect` to trigger side effects (API calls).
+* Implemented debouncing using `setTimeout` inside `useEffect` to delay API calls until the user pauses typing, improving performance and reducing unnecessary requests.
+* Included a cleanup function with `clearTimeout` to cancel previous timeouts on rapid input changes.
+* Wrapped the fetch logic inside a `try...catch` block to handle errors gracefully and avoid breaking the UI on failed API responses.
+
+---
+
+ React hooks:
 useState to manage input, results, loading, and dropdown visibility.
 useEffect to trigger API calls when input changes.
 
 ### . Debouncing for Optimization
 - Implemented a 300ms debounce using `setTimeout` inside `useEffect` to delay API requests until the user pauses typing.
 - Cleared the timeout on each keystroke to avoid rapid requests.
-### 3. Conditional Search
+- 
+### . Conditional Search
 - Triggered the API call only if the input length is 2 or more characters to reduce noise and avoid unnecessary API hits.
 
 ### . UI Design
