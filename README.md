@@ -47,7 +47,7 @@ useEffect to trigger API calls when input changes.
 ### . Debouncing for Optimization
 - Implemented a 300ms debounce using `setTimeout` inside `useEffect` to delay API requests until the user pauses typing.
 - Cleared the timeout on each keystroke to avoid rapid requests.
-- 
+  
 ### . Conditional Search
 - Triggered the API call only if the input length is 2 or more characters to reduce noise and avoid unnecessary API hits.
 
