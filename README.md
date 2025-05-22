@@ -16,21 +16,38 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Objective
 
-## Learn More
+Build an AutoComplete search field that:
+- Fetches suggestions from an API as the user types.
+- Displays suggestions in a dropdown.
+- Avoids unnecessary API calls.
+- Provides a smooth and responsive UI experience.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##Thought Processs
 
-## Deploy on Vercel
+i have used fetch to get the data from the given api and have used react hooks such as useState ,useEffect
+i have also implemented debouncing using setTimeout.also used try and catch to catch the error if any.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Used React hooks:
+useState to manage input, results, loading, and dropdown visibility.
+useEffect to trigger API calls when input changes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### . Debouncing for Optimization
+- Implemented a 300ms debounce using `setTimeout` inside `useEffect` to delay API requests until the user pauses typing.
+- Cleared the timeout on each keystroke to avoid rapid requests.
+### 3. Conditional Search
+- Triggered the API call only if the input length is 2 or more characters to reduce noise and avoid unnecessary API hits.
+
+### . UI Design
+- Used TailwindCSS for styling.
+- Displayed results in a dropdown-like container under the search input.
+- Added hover effect to dropdown items for better UX.
+- Showed a loading indicator while the API call is in progress.
+
+---
+- 
