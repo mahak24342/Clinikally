@@ -28,12 +28,6 @@ Build an AutoComplete search field that:
 ---
 
 
-###Thought Processs
-
-Here’s a polished and professional version of your paragraph that you can include in your `README.md` under the **Thought Process** section or use anywhere else:
-
----
-
 ### 🧠 Thought Process
 
 To implement the AutoComplete functionality:
@@ -64,4 +58,3 @@ useEffect to trigger API calls when input changes.
 - Showed a loading indicator while the API call is in progress.
 
 ---
-- 
